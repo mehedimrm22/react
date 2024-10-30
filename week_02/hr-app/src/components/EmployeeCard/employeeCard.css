@@ -1,0 +1,17 @@
+.card {
+  padding: 1rem;
+  background-color: #00a16e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ddd;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card p,
+.card h3 {
+  margin: 0;
+  margin-bottom: 1rem;
+}

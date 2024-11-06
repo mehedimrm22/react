@@ -81,22 +81,22 @@ const employees = [
     },
     {
         id: 9,
-        name: "Mahmudur Rahman",
-        initRole: "Front End Developer",
-        department: "Something",
+        name: "Cameron White",
+        initRole: "Game Developer",
+        department: "Game",
         startDate: "2018-02-01",
         location: "Pasila",
-        email: "mahmudur@email.com",
+        email: "white@email.com",
         initSalary: "5000"
     },
     {
         id: 10,
-        name: "Mahmudur Rahman",
-        initRole: "Front End Developer",
-        department: "Something",
+        name: "Anu Lehtinen",
+        initRole: "UI",
+        department: "Design",
         startDate: "2018-02-01",
         location: "Pasila",
-        email: "mahmudur@email.com",
+        email: "anu@email.com",
         initSalary: "5000"
     }
 ]

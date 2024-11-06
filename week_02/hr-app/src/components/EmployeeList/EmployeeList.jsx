@@ -5,19 +5,9 @@ import employees from "../../data/employeeData";
 function EmpList(props) {
   return (
     <>
-      {employees.map((employee) => (
-        <EmpCard
-          key={employee.id}
-          {...employee}
-          /* name={employee.name}
-          initRole={employee.initRole}
-          department={employee.department}
-          startDate={employee.startDate}
-          location={employee.location}
-          email={employee.email}
-          initSalary={employee.initSalary} */
-        />
-      ))}
+      {employees.map((employee) => {
+        return <EmpCard key={employee.id} {...employee} />;
+      })}
     </>
   );
 }

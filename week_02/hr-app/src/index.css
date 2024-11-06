@@ -31,6 +31,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(to left, #e7e7e7, #acb0b5);
 }
 
 h1 {

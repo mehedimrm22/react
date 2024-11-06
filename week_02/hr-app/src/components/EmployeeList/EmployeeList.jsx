@@ -1,5 +1,6 @@
 import EmpCard from "../EmployeeCard/EmployeeCard";
 import "./employeeList.css";
+import "../../data/employeeData";
 
 function EmpList(props) {
   return (

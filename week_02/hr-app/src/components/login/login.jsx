@@ -1,20 +1,8 @@
-import { useState } from "react";
-
-function Login() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(!isLoggedIn);
-  };
-
+function Login(props) {
   return (
     <>
       <div>
-        {isLoggedIn ? (
-          <button onClick={handleLogin}>Log Out</button>
-        ) : (
-          <button onClick={handleLogin}>Log In</button>
-        )}
+        <button onClick={props.click}>Log In</button>
       </div>
     </>
   );

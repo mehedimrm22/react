@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import "./employeeCard.css";
 
 function EmpCard(props) {
@@ -20,11 +19,13 @@ function EmpCard(props) {
   return (
     <>
       <div className="card">
-        <h3>Name: {props.name}</h3>
-        <p>Role: {role}</p>
+        <h3>{props.name}</h3>
+        <p>{role}</p>
         <p>Dept: {props.department}</p>
-        <p>Email: {props.email}</p>
+        <p>Start Date: {props.startDate}</p>
+        <p>Location: {props.location}</p>
         <p>Salary: {salary}</p>
+        <p>Email: {props.email}</p>
         <button onClick={clickHandler}>Promote</button>
       </div>
     </>

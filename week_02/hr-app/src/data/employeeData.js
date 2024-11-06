@@ -100,3 +100,5 @@ const employees = [
         initSalary: "5000"
     }
 ]
+
+export default employees;

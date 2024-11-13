@@ -35,7 +35,9 @@ function App() {
         </>
       ) : (
         <div>
-          <p>Please log in to see the list</p>
+          <p style={{ color: "red", fontSize: "20px" }}>
+            Please log in to see the list
+          </p>
           <button onClick={handleLoginClick}>Log In</button>
         </div>
       )}

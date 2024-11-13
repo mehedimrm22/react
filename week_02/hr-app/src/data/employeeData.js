@@ -13,7 +13,7 @@ const employees = [
         id: 2,
         name: "Brett Lee",
         initRole: "Back End Developer",
-        department: "Web Developmen",
+        department: "Web Development",
         startDate: "2015-06-05",
         location: "Helsinki",
         email: "lee@email.com",

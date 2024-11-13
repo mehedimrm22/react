@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./employeeCard.css";
 
 function EmpCard(props) {
-  const [role, setRole] = useState(props.initRole);
+  const [role, setRole] = useState(false);
   const [salary, setSalary] = useState(props.initSalary);
   const [button, setButton] = useState("Promote");
   const [star, setStar] = useState(false);
 
   const clickHandler = () => {
     if (role === "Team Lead") {
-      setRole(props.initRole);
+      setRole();
       setSalary(props.initSalary);
       setButton("Promote");
       setStar("");
@@ -21,6 +21,12 @@ function EmpCard(props) {
     }
   };
 
+  const remindHandler = () => {
+    const currentYear = new Date();
+    const joiningDate = new Date(props.startDate);
+    console.log(joiningDate);
+  };
+
   return (
     <>
       <div className="card">
@@ -28,6 +34,7 @@ function EmpCard(props) {
           {props.name} {star}
         </h3>
         <p>{role}</p>
+        <p>{props.initRole}</p>
         <p>{props.department}</p>
         <p>{props.startDate}</p>
         <p>{props.location}</p>
@@ -35,7 +42,7 @@ function EmpCard(props) {
         <p>{props.email}</p>
         <div className="buttons">
           <button onClick={clickHandler}>{button}</button>
-          <button>Reminder</button>
+          <button onClick={remindHandler}>Reminder</button>
         </div>
       </div>
     </>

@@ -17,7 +17,18 @@ function App() {
     <>
       <div className="container">
         <Header onClick={handleLogin} loginStatus={isLoggedIn} />
-        <main className="cards">{isLoggedIn ? <EmpList /> : <div></div>}</main>
+
+        {isLoggedIn ? (
+          <main className="cards">
+            <EmpList />
+          </main>
+        ) : (
+          <p>Please Log In</p>
+        )}
+
+        {/* <main className="cards">
+          {isLoggedIn ? <EmpList /> : <p>Please Log In</p>}
+        </main> */}
 
         <Footer />
       </div>

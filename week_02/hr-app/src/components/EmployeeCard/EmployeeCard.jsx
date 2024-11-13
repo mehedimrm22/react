@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./employeeCard.css";
 
+//Emp Card
 function EmpCard(props) {
   const [role, setRole] = useState(false);
   const [salary, setSalary] = useState(props.initSalary);

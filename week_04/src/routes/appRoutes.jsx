@@ -9,9 +9,15 @@ import ErrorPage from "../pages/ErrorPage";
 
 // creating the browser paths for different pages
 export const router = createBrowserRouter([
-  { path: "/", element: <Root />, errorElement: <ErrorPage /> },
-  { path: "/list", element: <List /> },
-  { path: "/about", element: <About /> },
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "/list", element: <List /> },
+      { path: "/about", element: <About /> },
+    ],
+  },
 ]);
 
 // export default router;

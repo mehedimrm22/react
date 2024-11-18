@@ -1,10 +1,23 @@
-import { useState } from "react";
-import Card from "./components/Card";
-import Button from "./components/Button";
-import personsData from "./data/personsData";
 import "./App.css";
+import Root from "./pages/Root";
+import List from "./pages/List";
+import About from "./pages/About";
 
 function App() {
+  return (
+    <>
+      <Root />
+      <List />
+      <About />
+    </>
+  );
+}
+
+export default App;
+
+// Previous Codes
+
+/* 
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const toggleLogin = () => {
@@ -49,6 +62,4 @@ function App() {
       </main>
     </>
   );
-}
-
-export default App;
+*/

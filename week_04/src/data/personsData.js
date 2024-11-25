@@ -1,21 +1,21 @@
 const persons = [
     {
         id: 1,
-        firstName: "Margit",
-        title: "CEO",
-        age: 29,
-        animal: "fox"
+        firstName: "John Cena",
+        title: "Developer",
+        age: 35,
+        animal: "Dogs"
     },
     {
         id: 2,
-        firstName: "Karin",
+        firstName: "Phil Salt",
         title: "Designer",
-        age: 45,
-        animal: "fox"
+        age: 25,
+        animal: "Cats"
     },
     {
         id: 3,
-        firstName: "Kati",
+        firstName: "Brett Lee",
         title: "Developer",
         age: 25,
         animal: "fox"

@@ -1,7 +1,9 @@
-function Button(props) {
+function Button({ onClick, text, type = "button", role = "primary" }) {
   return (
     <>
-      <button onClick={props.onClick}>{props.text}</button>
+      <button onClick={onClick} type={type} className={`button ${role}`}>
+        {text}
+      </button>
     </>
   );
 }

@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
+  width: 80%;
   margin: 0 auto;
-  /*   padding: 2rem; */
+  padding: 2rem 0;
   text-align: center;
+  position: relative;
+
 }
 
 header h1 {
@@ -12,7 +14,7 @@ header h1 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 

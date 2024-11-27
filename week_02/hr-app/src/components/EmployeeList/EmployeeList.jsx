@@ -2,7 +2,7 @@ import EmpCard from "../EmployeeCard/EmployeeCard";
 import "./employeeList.css";
 import employees from "../../data/employeeData";
 
-function EmpList(props) {
+function EmpList() {
   return (
     <>
       {employees.map((employee) => {

@@ -1,11 +1,13 @@
 import "./Footer.css";
 
-function Footer(props) {
+import React from "react";
+
+const Footer = () => {
   return (
     <footer>
       <p>Copyright &copy; Mehedi</p>
     </footer>
   );
-}
+};
 
 export default Footer;

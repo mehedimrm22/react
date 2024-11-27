@@ -1,22 +1,55 @@
 .card {
-  width: 300px;
   padding: 1rem;
   background-color: #00a16e;
   flex-direction: column;
   color: #ddd;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 6px 3px;
   text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.card p {
-  margin: 0 0 .6rem 0;
+.card:hover {
+  box-shadow: #b8b2b2 3px 7px 9px 5px;
 }
 
-.card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-  font-weight: bold;
+.card-img {
+  text-align: center;
+}
+
+.card-img img {
+  width: 150px;
+}
+
+.card-info {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card-info input {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.card-info .role {
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+.card .name {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.394);
+}
+
+.card-years {
+  margin-bottom: 20px;
 }
 
 .card .buttons {

@@ -3,102 +3,82 @@ const employees = [
     {
         id: 1,
         name: "John Cena",
-        initRole: "Front End Developer",
+        role: "Front End Developer",
         department: "Web Development",
         startDate: "2018-02-01",
-        location: "Pasila",
-        email: "john@email.com",
-        initSalary: "5000"
+        location: "Pasila"
     },
     {
         id: 2,
         name: "Brett Lee",
-        initRole: "Back End Developer",
+        role: "Back End Developer",
         department: "Web Development",
         startDate: "2015-06-05",
-        location: "Helsinki",
-        email: "lee@email.com",
-        initSalary: "5000"
+        location: "Helsinki"
     },
     {
         id: 3,
         name: "Mitchel Starc",
-        initRole: "Full Stack Developer",
+        role: "Full Stack Developer",
         department: "Web Development",
         startDate: "2020-03-08",
-        location: "Toolo",
-        email: "starc@email.com",
-        initSalary: "7000"
+        location: "Toolo"
     },
     {
         id: 4,
         name: "Pat Cummins",
-        initRole: "Mobile App Developer",
+        role: "Mobile App Developer",
         department: "Mobile App",
         startDate: "2012-02-01",
-        location: "Tampere",
-        email: "pat@email.com",
-        initSalary: "4000"
+        location: "Tampere"
     },
     {
         id: 5,
         name: "Devon Conway",
-        initRole: "Mobile App Developer",
+        role: "Mobile App Developer",
         department: "Mobile App",
         startDate: "2014-02-01",
-        location: "Turlu",
-        email: "devon@email.com",
-        initSalary: "5000"
+        location: "Turku"
     },
     {
         id: 6,
         name: "Trent Boult",
-        initRole: "HR",
-        department: "Admin",
+        role: "Game Developer",
+        department: "Game Development",
         startDate: "2019-02-01",
-        location: "Vaasa",
-        email: "trent@email.com",
-        initSalary: "6000"
+        location: "Vaasa"
     },
     {
         id: 7,
         name: "Belayet Hossain",
-        initRole: "Web Developer",
+        role: "Web Developer",
         department: "Web Development",
         startDate: "2015-02-01",
-        location: "Pasila",
-        email: "belayet@email.com",
-        initSalary: "5000"
+        location: "Pasila"
     },
     {
         id: 8,
         name: "Endrick",
-        initRole: "Back End",
+        role: "Back End",
         department: "Web Development",
         startDate: "2012-02-01",
-        location: "Pasila",
-        email: "endrick@email.com",
-        initSalary: "5000"
+        location: "Pasila"
     },
     {
         id: 9,
         name: "Cameron White",
-        initRole: "Game Developer",
-        department: "Game",
+        role: "Game Developer",
+        department: "Game Development",
         startDate: "2018-02-01",
-        location: "Pasila",
-        email: "white@email.com",
-        initSalary: "5000"
+        location: "Pasila"
     },
     {
         id: 10,
         name: "Anu Lehtinen",
-        initRole: "UI",
+        role: "UI Designer",
         department: "Design",
         startDate: "2018-02-01",
-        location: "Pasila",
-        email: "anu@email.com",
-        initSalary: "5000"
+        location: "Pasila"
     }
 ]
 

@@ -1,49 +1,76 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./employeeCard.css";
+import Button from "../Button/Button";
+import { YearsWorked } from "../YearsWorked/YearsWorked";
 
 //Emp Card
-function EmpCard(props) {
-  const [role, setRole] = useState(false);
-  const [salary, setSalary] = useState(props.initSalary);
+function EmpCard({ name, role, department, location, startDate }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [promoteRole, setPromoteRole] = useState(false);
+  const [person, setPerson] = useState({ role, department, location });
+
   const [button, setButton] = useState("Promote");
   const [star, setStar] = useState(false);
 
+  const yearsWorked = YearsWorked(startDate);
+
   const clickHandler = () => {
-    if (role === "Team Lead") {
-      setRole();
-      setSalary(props.initSalary);
+    if (promoteRole === "Team Lead") {
+      setPromoteRole("");
       setButton("Promote");
       setStar("");
     } else {
-      setRole("Team Lead");
-      setSalary("7000");
+      setPromoteRole("Team Lead");
       setButton("Demote");
       setStar("⭐");
     }
   };
 
-  const remindHandler = () => {
-    const currentYear = new Date();
-    const joiningDate = new Date(props.startDate);
-    console.log(joiningDate);
+  const inputChanges = (e) => {
+    const { name, value } = e.target;
+    setPerson((prevState) => ({ ...prevState, [name]: value }));
   };
+
+  const cardEdit = (value, name) =>
+    isEditing ? (
+      <input value={value} name={name} onChange={inputChanges} />
+    ) : (
+      <p className={name}>{value}</p>
+    );
 
   return (
     <>
       <div className="card">
-        <h3>
-          {props.name} {star}
-        </h3>
-        <p>{role}</p>
-        <p>{props.initRole}</p>
-        <p>{props.department}</p>
-        <p>{props.startDate}</p>
-        <p>{props.location}</p>
-        <p>{salary}</p>
-        <p>{props.email}</p>
-        <div className="buttons">
-          <button onClick={clickHandler}>{button}</button>
-          <button onClick={remindHandler}>Reminder</button>
+        <div className="card-img">
+          <img src={`https://api.multiavatar.com/${name}.svg`} />
+        </div>
+        {/* Card Header */}
+        <div className="card-header">
+          <p className="name">
+            {name} {star}
+          </p>
+        </div>
+        {/* Card Body */}
+        <div className="card-info">
+          {cardEdit(person.role, "role")}
+          {cardEdit(person.department, "department")}
+          {cardEdit(person.location, "location")}
+        </div>
+
+        <div className="card-years">
+          <p>{startDate}</p>
+          <p>Years Worked: {yearsWorked}</p>
+        </div>
+
+        <div className="card-footer">
+          <div className="buttons">
+            <button onClick={clickHandler}>{button}</button>
+            <Button
+              onClick={() => setIsEditing((prev) => !prev)}
+              text={isEditing ? "Save" : "Edit"}
+              role="secondary"
+            />
+          </div>
         </div>
       </div>
     </>

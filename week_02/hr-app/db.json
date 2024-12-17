@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John Cena",
+      "role": "Front End Developer",
+      "department": "Web Development",
+      "startDate": "2018-02-01",
+      "location": "Pasila"
+    },
+    {
+      "id": "2",
+      "name": "Brett Lee",
+      "role": "Back End Developer",
+      "department": "Web Development",
+      "startDate": "2015-06-05",
+      "location": "Helsinki"
+    },
+    {
+      "id": "3",
+      "name": "Mitchel Starc",
+      "role": "Full Stack Developer",
+      "department": "Web Development",
+      "startDate": "2020-03-08",
+      "location": "Toolo"
+    },
+    {
+      "id": "4",
+      "name": "Pat Cummins",
+      "role": "Mobile App Developer",
+      "department": "Mobile App",
+      "startDate": "2012-02-01",
+      "location": "Tampere"
+    },
+    {
+      "id": "5",
+      "name": "Devon Conway",
+      "role": "Mobile App Developer",
+      "department": "Mobile App",
+      "startDate": "2014-02-01",
+      "location": "Turku"
+    },
+    {
+      "id": "6",
+      "name": "Trent Boult",
+      "role": "Game Developer",
+      "department": "Game Development",
+      "startDate": "2019-02-01",
+      "location": "Vaasa"
+    }
+  ]
+}

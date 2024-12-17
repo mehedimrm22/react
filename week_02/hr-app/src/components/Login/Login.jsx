@@ -2,6 +2,8 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
+import "./Login.css";
+
 const Login = ({ loginHandler }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -19,8 +21,8 @@ const Login = ({ loginHandler }) => {
 
   return (
     <div>
-      <form onSubmit={checkCredentials}>
-        <p>Please log in</p>
+      <form className="login-form" onSubmit={checkCredentials}>
+        <h2>Please Login to see the Employee List</h2>
         <div>
           <label htmlFor="username">Username</label>
           <input

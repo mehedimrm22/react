@@ -57,3 +57,14 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.card.single {
+  width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.card.single h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}

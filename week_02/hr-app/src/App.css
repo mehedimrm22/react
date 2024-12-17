@@ -1,5 +1,5 @@
 #root {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 2rem 0;
   text-align: center;
@@ -20,8 +20,4 @@ header h1 {
 
 .login {
   margin-bottom: 20px;
-}
-
-.login-button {
-  margin-bottom: 1rem;
 }

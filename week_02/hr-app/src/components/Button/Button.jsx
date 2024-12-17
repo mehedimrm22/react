@@ -1,3 +1,5 @@
+import "./Button.css";
+
 function Button({ onClick, text, type = "button", role = "primary" }) {
   return (
     <>

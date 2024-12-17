@@ -5,8 +5,9 @@ import List from "../pages/List";
 import Form from "../pages/Form";
 import Login from "../components/Login/Login";
 import ErrorPage from "../pages/ErrorPage";
+import SingleEmployee from "../pages/SingleEmployee";
 
-const createRoutes = (isLoggedIn, loginHandler) =>
+const createRoutes = (isLoggedIn, loginHandler, handleNewEmployee) =>
   createBrowserRouter(
     [
       {
@@ -19,7 +20,11 @@ const createRoutes = (isLoggedIn, loginHandler) =>
         errorElement: <ErrorPage />,
         children: [
           { path: "/", element: <List /> },
-          { path: "/new", element: <Form /> },
+          {
+            path: "/new",
+            element: <Form onEmployeeAdded={handleNewEmployee} />, // Pass the handler to Form
+          },
+          { path: "/employee/:id", element: <SingleEmployee /> },
         ],
       },
     ],

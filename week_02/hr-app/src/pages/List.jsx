@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+/* import { useEffect, useState } from "react";
 import EmpList from "../components/EmployeeList/EmployeeList";
 
-const List = () => {
+const List = ({ data }) => {
   const [employees, setEmployees] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -12,7 +12,7 @@ const List = () => {
         setEmployees(data);
         setIsLoading(false);
       });
-  }, []);
+  }, [data]);
 
   return (
     <>
@@ -20,7 +20,7 @@ const List = () => {
         <p>Loadding...</p>
       ) : (
         <div className="cards">
-          <EmpList />
+          <EmpList employees={employees} />
         </div>
       )}
     </>
@@ -28,33 +28,50 @@ const List = () => {
 };
 
 export default List;
+ */
 
-/* const Form = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    role: "",
-    department: "",
-    startDate: "",
-    location: "",
-  });
+import { useEffect, useState } from "react";
+import EmpList from "../components/EmployeeList/EmployeeList";
+import Form from "../pages/Form";
 
-  const changeHandler = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+const List = () => {
+  const [employees, setEmployees] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [triggerFetch, setTriggerFetch] = useState(false);
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-
-    fetch("http://localhost:3001/employees", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+  const fetchEmployees = () => {
+    setIsLoading(true);
+    fetch("http://localhost:3001/employees")
       .then((response) => response.json())
       .then((data) => {
-        console.log("Data added successfully:", data);
+        setEmployees(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setIsLoading(false);
       });
-  }; */
+  };
+
+  useEffect(() => {
+    fetchEmployees();
+  }, [triggerFetch]);
+
+  const handleNewEmployee = () => {
+    setTriggerFetch((prev) => !prev);
+  };
+
+  return (
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="cards">
+          <EmpList employees={employees} />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default List;

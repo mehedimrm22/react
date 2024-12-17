@@ -1,44 +1,26 @@
-import { NavLink } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import "./Header.css";
+import Button from "../Button/Button";
 
-const Header = (props) => {
-  const buttonText = props.loginStatus ? "Log out" : "Log in";
+const Header = ({ isLoggedIn, loginHandler }) => {
+  const buttonText = isLoggedIn ? "Log out" : "Log in";
+
   return (
     <header>
       <h1>Employee Dashboard</h1>
       <nav>
         <ul>
           <li>
-            <NavLink to="/">Employees</NavLink>
+            <Link to="/">Employees</Link>
           </li>
-          {/* <li>
-            <NavLink to="/employees">Employees</NavLink>
-          </li> */}
           <li>
-            <NavLink to="/new">New Employee</NavLink>
+            <Link to="/new">New Employee</Link>
           </li>
         </ul>
       </nav>
+      <Button onClick={loginHandler} text={buttonText} />
     </header>
   );
 };
 
 export default Header;
-
-/* mport Button from "../Button/Button";
-import "./Header.css";
-
-const Header = (props) => {
-  const buttonText = props.loginStatus ? "Log out" : "Log in";
-
-  return (
-    <header>
-      <h1>Employee dashboard</h1>
-      <Button onClick={props.onClick} text={buttonText} />
-    </header>
-  );
-};
-
-export default Header;
- */

@@ -5,8 +5,11 @@ form {
 
 .form input {
     width: 300px;
-    padding: 0.3rem;
+    padding: 5px;
     font-size: inherit;
     font-family: inherit;
-    margin: 0.5rem;
+    margin: 10px;
+    border: 1px solid #00a16e;
+    outline: none;
+    border-radius: 10px;
 }

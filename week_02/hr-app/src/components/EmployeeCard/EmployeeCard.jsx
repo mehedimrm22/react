@@ -42,7 +42,7 @@ function EmpCard({ name, role, department, location, startDate }) {
     <>
       <div className="card">
         <div className="card-img">
-          <img src={`https://robohash.org/${name}?set=set2`} />
+          <img src={`https://api.multiavatar.com/${name}.svg`} />
         </div>
         {/* Card Header */}
         <div className="card-header">

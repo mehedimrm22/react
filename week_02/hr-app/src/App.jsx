@@ -1,25 +1,26 @@
-import { RouterProvider } from "react-router-dom";
-
-import { router } from "./routes/AppRoutes";
-
-import "./App.css";
 import { useState } from "react";
+import { RouterProvider } from "react-router-dom";
+import createRoutes from "./routes/AppRoutes";
 
-import EmpList from "./components/EmployeeList/EmployeeList";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+// Import App.css to apply global styles
+import "./App.css";
 
 function App() {
-  /* const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => {
-    setIsLoggedIn(!isLoggedIn);
-  }; */
+  const loginHandler = () => {
+    setIsLoggedIn((prevState) => !prevState);
+  };
+
+  const router = createRoutes(isLoggedIn, loginHandler);
 
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <RouterProvider
+      router={router}
+      future={{
+        v7_startTransition: true,
+      }}
+    />
   );
 }
 

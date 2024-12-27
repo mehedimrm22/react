@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // For navigation
-import "./employeeCard.css";
+import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import { YearsWorked } from "../YearsWorked/YearsWorked";
+import styles from "./EmployeeCard.module.css";
 
 function EmpCard({ id, name, role, department, location, startDate }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -34,41 +34,45 @@ function EmpCard({ id, name, role, department, location, startDate }) {
     isEditing ? (
       <input value={value} name={name} onChange={inputChanges} />
     ) : (
-      <p className={name}>{value}</p>
+      <p className={styles[name]}>{value}</p>
     );
 
   return (
-    <div className="card">
-      <div className="card-img">
+    <div className={styles.card}>
+      <div className={styles.card_img}>
         <img src={`https://api.multiavatar.com/${name}.svg`} alt={name} />
       </div>
       {/* Card Header */}
-      <div className="card-header">
-        <p className="name">
+      <div className={styles.card_header}>
+        <p className={styles.name}>
           {name} {star}
         </p>
       </div>
       {/* Card Body */}
-      <div className="card-info">
+      <div className={styles.card_info}>
         {cardEdit(person.role, "role")}
         {cardEdit(person.department, "department")}
         {cardEdit(person.location, "location")}
       </div>
 
-      <div className="card-years">
+      <div className={styles.card_years}>
         <p>{startDate}</p>
         <p>Years Worked: {yearsWorked}</p>
       </div>
 
-      <div className="card-footer">
-        <div className="buttons">
-          <button onClick={clickHandler}>{button}</button>
+      <div className={styles.card_footer}>
+        <div className={styles.buttons}>
+          <Button
+            className={styles.button}
+            onClick={clickHandler}
+            text={button}
+          />
+
           <Button
             onClick={() => setIsEditing((prev) => !prev)}
             text={isEditing ? "Save" : "Edit"}
             role="secondary"
           />
-          {/* "See More" Button for Detailed View */}
           <Link to={`/employee/${id}`}>
             <Button text="See More" role="primary" />
           </Link>

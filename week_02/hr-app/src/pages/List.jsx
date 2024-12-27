@@ -1,75 +1,28 @@
-/* import { useEffect, useState } from "react";
-import EmpList from "../components/EmployeeList/EmployeeList";
-
-const List = ({ data }) => {
-  const [employees, setEmployees] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/employees")
-      .then((response) => response.json())
-      .then((data) => {
-        setEmployees(data);
-        setIsLoading(false);
-      });
-  }, [data]);
-
-  return (
-    <>
-      {isLoading ? (
-        <p>Loadding...</p>
-      ) : (
-        <div className="cards">
-          <EmpList employees={employees} />
-        </div>
-      )}
-    </>
-  );
-};
-
-export default List;
- */
-
 import { useEffect, useState } from "react";
+import useAxiosRequest from "../services/useAxios";
 import EmpList from "../components/EmployeeList/EmployeeList";
 import Form from "../pages/Form";
 
 const List = () => {
+  const { read, loading, error } = useAxiosRequest("http://localhost:3001");
   const [employees, setEmployees] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [triggerFetch, setTriggerFetch] = useState(false);
-
-  const fetchEmployees = () => {
-    setIsLoading(true);
-    fetch("http://localhost:3001/employees")
-      .then((response) => response.json())
-      .then((data) => {
-        setEmployees(data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setIsLoading(false);
-      });
-  };
 
   useEffect(() => {
-    fetchEmployees();
-  }, [triggerFetch]);
+    const fetchEmployees = async () => {
+      try {
+        const data = await read("/employees");
+        setEmployees(data);
+      } catch (err) {
+        console.error("Error fetching employees:", err);
+      }
+    };
 
-  const handleNewEmployee = () => {
-    setTriggerFetch((prev) => !prev);
-  };
+    fetchEmployees();
+  }, [read]);
 
   return (
-    <div>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : (
-        <div className="cards">
-          <EmpList employees={employees} />
-        </div>
-      )}
+    <div className="cards">
+      <EmpList employees={employees} />
     </div>
   );
 };

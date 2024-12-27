@@ -1,23 +1,15 @@
-# HR-App
+# **Employee Dashboard (HR APP)**
 
-This project is displaying the list of all the employees working in the company.
-There is a promote button which allows the user to promote the role of the employee and the salary according to the role.
+This is a React-based Employee Dashboard application that allows users to view, edit, and manage employee details. The project demonstrates the use of modern React features like hooks, reusable components, CSS modules, and custom hooks.
 
-## Technologies used
+## **Features**
 
-Built with:
-
-- HTML
-- JS
-- CSS
-- Reactjs
-- ...
-
-## Setup and usage
-
-Live page [here](https://github.com/mehedimrm22/react/tree/main/week_02/hr-app)
-
-## Screenshot
+- **View Employees**: Displays a list of employees with their details.
+- **Edit Details**: Update employee information directly in the UI.
+- **Promote/Demote**: Toggle an employee's role as "Team Lead."
+- **Years Worked**: Calculates the number of years an employee has worked.
+- **Reusable Components**: Includes buttons, cards, and other UI elements.
+- **Custom Hooks**: Manages API requests and employee states efficiently.
 
 ## Sources
 

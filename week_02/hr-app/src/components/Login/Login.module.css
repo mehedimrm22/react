@@ -1,13 +1,13 @@
-.login-form {
+.login_form {
     width: 100%;
 }
 
-.login-form h2 {
+.login_form h2 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.login-form input {
+.login_form input {
     width: 300px;
     padding: 5px;
     font-size: inherit;

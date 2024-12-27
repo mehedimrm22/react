@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import "./Header.css";
+import styles from "./Header.module.css";
 import Button from "../Button/Button";
 
 const Header = ({ isLoggedIn, loginHandler }) => {
   const buttonText = isLoggedIn ? "Log out" : "Log in";
 
   return (
-    <header>
+    <header className={styles.header}>
       <h1>Employee Dashboard</h1>
       <nav>
         <ul>

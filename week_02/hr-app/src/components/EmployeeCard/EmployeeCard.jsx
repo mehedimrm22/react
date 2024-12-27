@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // For navigation
+import { Link } from "react-router-dom";
 import "./employeeCard.css";
 import Button from "../Button/Button";
 import { YearsWorked } from "../YearsWorked/YearsWorked";
@@ -68,7 +68,6 @@ function EmpCard({ id, name, role, department, location, startDate }) {
             text={isEditing ? "Save" : "Edit"}
             role="secondary"
           />
-          {/* "See More" Button for Detailed View */}
           <Link to={`/employee/${id}`}>
             <Button text="See More" role="primary" />
           </Link>

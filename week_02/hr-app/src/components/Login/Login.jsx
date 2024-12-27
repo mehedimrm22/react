@@ -15,7 +15,7 @@ const Login = ({ loginHandler }) => {
       loginHandler();
       navigate("/");
     } else {
-      alert("use correct credentials");
+      alert("Enter valid username and password");
     }
   };
 
@@ -27,6 +27,7 @@ const Login = ({ loginHandler }) => {
           <label htmlFor="username">Username</label>
           <input
             type="text"
+            placeholder="admin"
             onChange={(e) => setUsername(e.target.value)}
             id="username"
           />
@@ -35,6 +36,7 @@ const Login = ({ loginHandler }) => {
           <label htmlFor="password">Password</label>
           <input
             type="password"
+            placeholder="1234"
             onChange={(e) => setPassword(e.target.value)}
             id="password"
           />

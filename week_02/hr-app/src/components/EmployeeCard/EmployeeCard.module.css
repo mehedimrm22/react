@@ -13,20 +13,20 @@
   box-shadow: #b8b2b2 3px 7px 9px 5px;
 }
 
-.card-img {
+.card_img {
   text-align: center;
 }
 
-.card-img img {
+.card_img img {
   width: 150px;
 }
 
-.card-info {
+.card_info {
   margin-bottom: 20px;
   position: relative;
 }
 
-.card-info input {
+.card_info input {
   width: 100%;
   display: block;
   margin: 10px 0;
@@ -36,7 +36,7 @@
   outline: none;
 }
 
-.card-info .role {
+.card_info .role {
   padding: 10px 0;
   font-size: 12px;
 }
@@ -48,7 +48,7 @@
   border-bottom: 1px solid rgba(221, 221, 221, 0.394);
 }
 
-.card-years {
+.card_years {
   margin-bottom: 20px;
 }
 

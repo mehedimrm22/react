@@ -1,5 +1,4 @@
 import EmpCard from "../EmployeeCard/EmployeeCard";
-import "./employeeList.css";
 
 function EmpList({ employees }) {
   return (

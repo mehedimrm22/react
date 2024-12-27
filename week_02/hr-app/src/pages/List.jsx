@@ -11,8 +11,6 @@ const List = () => {
     const fetchEmployees = async () => {
       try {
         const data = await read("/employees");
-
-        console.log("Fetched employees:", data);
         setEmployees(data);
       } catch (err) {
         console.error("Error fetching employees:", err);

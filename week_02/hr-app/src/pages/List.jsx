@@ -4,7 +4,9 @@ import EmpList from "../components/EmployeeList/EmployeeList";
 import Form from "../pages/Form";
 
 const List = () => {
-  const { read, loading, error } = useAxiosRequest("http://localhost:3001");
+  const { read, loading, error } = useAxiosRequest(
+    "https://hr-app-backend-9z1g.onrender.com/db"
+  );
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
